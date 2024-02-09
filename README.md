@@ -23,3 +23,22 @@ PLEASE, CHECK PROJECT'S ISSUE PAGE TO SEE WHAT ARE MISSING ON THE PROJECT
 ```
 docker-compose up -d --no-deps --build
 ```
+
+## End-points
+- Getting Token
+http://localhost:5005/getToken
+Method: POST
+Body:
+{
+    "username": "tugkan.meral",
+    "password": "123456"
+}
+
+- Employee Test (guarded by gateway w/ authorization - 'EmployeeBusiness' policy)
+http://localhost:5005/employee/test?value=asd
+Method: GET
+PS: returns what you send as param 'value'
+
+- Employee Test (NOT guarded by gateway)
+http://localhost:5005/employee
+Method: GET
