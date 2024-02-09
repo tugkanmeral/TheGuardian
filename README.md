@@ -12,6 +12,9 @@ Auth Service is reachable service directly (w/o token) but over gateway. The ser
 ### Employee Service
 Employee Service is protected by a gateway. However, for proving that we have a opportunity to open an end-point for public, there is one end-point which is '/api/employee'. The end-point may be called w/o token.
 
+## Exposing Only Gateway
+The Docker Compose file expose only Gateway service. This is provide us to reach all services over gateway.
+
 ## Developer Notes
 PLEASE, CHECK PROJECT'S ISSUE PAGE TO SEE WHAT ARE MISSING ON THE PROJECT
 
