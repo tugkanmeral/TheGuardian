@@ -1,0 +1,34 @@
+version: '3'
+services:
+  gateway:
+    image: tugkanmeral/the-guardian-gateway:latest
+    build: 
+      context: ./src/Gateway
+      dockerfile: Dockerfile
+    ports: 
+      - 5005:8080
+    networks:
+      - the-guardian-br-network
+    container_name: the-guardian-gateway-container
+
+  auth:
+    image: tugkanmeral/the-guardian-auth:latest
+    build: 
+      context: ./src/Services/Auth
+      dockerfile: Dockerfile
+    networks:
+      - the-guardian-br-network
+    container_name: the-guardian-auth-container
+
+  employee:
+    image: tugkanmeral/the-guardian-employee:latest
+    build: 
+      context: ./src/Services/Employee
+      dockerfile: Dockerfile
+    networks:
+      - the-guardian-br-network
+    container_name: the-guardian-employee-container
+
+networks:
+  the-guardian-br-network:
+    driver: bridge
