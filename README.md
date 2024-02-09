@@ -19,9 +19,9 @@ The Docker Compose file expose only Gateway service. This is provide us to reach
 PLEASE, CHECK PROJECT'S ISSUE PAGE TO SEE WHAT ARE MISSING ON THE PROJECT
 
 ## Running Project
-- Be sure Docker is installed and up to date on PC/Mac
+- Be sure Docker is installed and up to date on your PC/Mac
 - Open a terminal
-- Go to root file of the project.
+- Go to root directory of the project.
 - Run command bellow
 ```
 docker-compose up -d --no-deps --build
